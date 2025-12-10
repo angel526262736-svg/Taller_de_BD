@@ -1,0 +1,175 @@
+/* General reset and body styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f5f6f5;
+    color: #1a1a1a;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    padding: 24px;
+}
+
+/* Container for forms and content */
+.container {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    padding: 32px;
+    max-width: 720px;
+    width: 100%;
+    margin: 24px auto;
+    animation: fadeIn 0.4s ease-in-out;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-8px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Headings */
+h1, h2 {
+    color: #1a1a1a;
+    text-align: center;
+    margin-bottom: 24px;
+    font-weight: 500;
+}
+
+h1 {
+    font-size: 24px;
+}
+
+h2 {
+    font-size: 20px;
+}
+
+/* Form styling */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+label {
+    font-weight: 500;
+    color: #333333;
+    font-size: 14px;
+}
+
+input[type="text"],
+input[type="password"],
+select,
+textarea {
+    padding: 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+select:focus,
+textarea:focus {
+    border-color: #005f99;
+    box-shadow: 0 0 0 3px rgba(0, 95, 153, 0.1);
+    outline: none;
+}
+
+/* Button styling with hover animation */
+button {
+    background-color: #005f99;
+    color: #ffffff;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #004a7a;
+    transform: translateY(-1px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+/* Link styling with animation */
+a {
+    color: #005f99;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #004a7a;
+    text-decoration: underline;
+}
+
+/* List styling for grades */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    background-color: #f9fafb;
+    padding: 12px;
+    margin: 8px 0;
+    border-radius: 6px;
+    border: 1px solid #e5e7eb;
+    animation: slideIn 0.3s ease-in-out;
+}
+
+/* Slide-in animation for list items */
+@keyframes slideIn {
+    from { opacity: 0; transform: translateX(-16px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+/* HR styling */
+hr {
+    border: 0;
+    border-top: 1px solid #e5e7eb;
+    margin: 24px 0;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    .container {
+        padding: 16px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    input[type="text"],
+    input[type="password"],
+    select,
+    textarea {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+}
